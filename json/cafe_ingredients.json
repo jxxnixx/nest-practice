@@ -1,0 +1,110 @@
+{
+  "categories": [
+    {
+      "category": "과일",
+      "ingredients": [
+        { "nameKR": "사과", "nameEN": "apple", "imageURL": "" },
+        { "nameKR": "바나나", "nameEN": "banana", "imageURL": "" },
+        { "nameKR": "블루베리", "nameEN": "blueberries", "imageURL": "" },
+        { "nameKR": "체리", "nameEN": "cherry", "imageURL": "" },
+        { "nameKR": "코코넛", "nameEN": "coconut", "imageURL": "" },
+        { "nameKR": "자몽", "nameEN": "grapefruit", "imageURL": "" },
+        { "nameKR": "청포도", "nameEN": "greengrapes", "imageURL": "" },
+        { "nameKR": "키위", "nameEN": "kiwi", "imageURL": "" },
+        { "nameKR": "레몬", "nameEN": "lemon", "imageURL": "" },
+        { "nameKR": "라임", "nameEN": "lime", "imageURL": "" },
+        { "nameKR": "망고", "nameEN": "mango", "imageURL": "" },
+        { "nameKR": "오렌지", "nameEN": "orange", "imageURL": "" },
+        { "nameKR": "복숭아", "nameEN": "peach", "imageURL": "" },
+        { "nameKR": "파인애플", "nameEN": "pineapple", "imageURL": "" },
+        { "nameKR": "라즈베리", "nameEN": "raspberries", "imageURL": "" },
+        { "nameKR": "딸기", "nameEN": "strawberry", "imageURL": "" },
+        { "nameKR": "수박", "nameEN": "watermelon", "imageURL": "" },
+        { "nameKR": "유자", "nameEN": "yuzu", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "시럽",
+      "ingredients": [
+        { "nameKR": "카라멜 시럽", "nameEN": "caramelsyrup", "imageURL": "" },
+        {
+          "nameKR": "치즈케이크 시럽",
+          "nameEN": "cheesecakesyrup",
+          "imageURL": ""
+        },
+        { "nameKR": "플로럴 시럽", "nameEN": "flowersyrup", "imageURL": "" },
+        {
+          "nameKR": "헤이즐넛 시럽",
+          "nameEN": "hazelnutsyrup",
+          "imageURL": ""
+        },
+        { "nameKR": "바닐라 시럽", "nameEN": "vanillasyrup", "imageURL": "" },
+        { "nameKR": "시럽", "nameEN": "syrup", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "베이스",
+      "ingredients": [
+        { "nameKR": "커피", "nameEN": "coffee", "imageURL": "" },
+        { "nameKR": "에스프레소", "nameEN": "espresso", "imageURL": "" },
+        { "nameKR": "물", "nameEN": "water", "imageURL": "" },
+        { "nameKR": "탄산수", "nameEN": "sparklingwater", "imageURL": "" },
+        { "nameKR": "우유", "nameEN": "milk", "imageURL": "" },
+        { "nameKR": "얼음", "nameEN": "ice", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "유제품",
+      "ingredients": [
+        {
+          "nameKR": "마스카포네 치즈",
+          "nameEN": "mascarponecheese",
+          "imageURL": ""
+        },
+        { "nameKR": "휘핑크림", "nameEN": "whippedcream", "imageURL": "" },
+        { "nameKR": "요거트파우더", "nameEN": "yogurtpowder", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "디저트",
+      "ingredients": [
+        { "nameKR": "초콜릿", "nameEN": "chocolate", "imageURL": "" },
+        { "nameKR": "쿠키앤크림", "nameEN": "cookieandcream", "imageURL": "" },
+        { "nameKR": "다크 초콜릿", "nameEN": "darkchocolate", "imageURL": "" },
+        { "nameKR": "꿀", "nameEN": "honey", "imageURL": "" },
+        { "nameKR": "오레오", "nameEN": "oreo", "imageURL": "" },
+        { "nameKR": "고구마", "nameEN": "sweetpotato", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "티",
+      "ingredients": [
+        { "nameKR": "블랙티", "nameEN": "blacktea", "imageURL": "" },
+        { "nameKR": "캐모마일", "nameEN": "chamomile", "imageURL": "" },
+        { "nameKR": "얼그레이", "nameEN": "earlgrey", "imageURL": "" },
+        { "nameKR": "녹차", "nameEN": "greentea", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "견과류",
+      "ingredients": [
+        { "nameKR": "아몬드", "nameEN": "almond", "imageURL": "" },
+        { "nameKR": "피스타치오", "nameEN": "pistachio", "imageURL": "" },
+        { "nameKR": "토피넛", "nameEN": "toffeenut", "imageURL": "" },
+        { "nameKR": "호두", "nameEN": "walnut", "imageURL": "" }
+      ]
+    },
+    {
+      "category": "향신료",
+      "ingredients": [
+        { "nameKR": "시나몬", "nameEN": "cinnamon", "imageURL": "" },
+        { "nameKR": "생강", "nameEN": "ginger", "imageURL": "" },
+        { "nameKR": "라벤더", "nameEN": "lavender", "imageURL": "" },
+        { "nameKR": "민트", "nameEN": "mint", "imageURL": "" },
+        { "nameKR": "로즈마리", "nameEN": "rosemary", "imageURL": "" },
+        { "nameKR": "바질", "nameEN": "basil", "imageURL": "" },
+        { "nameKR": "흑임자", "nameEN": "blackseed", "imageURL": "" }
+      ]
+    }
+  ]
+}
