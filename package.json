@@ -17,13 +17,20 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "seed:cafe-recipes": "ts-node -r tsconfig-paths/register src/cafe-recipe-seed.ts",
+    "seed:cafe-ingredients": "ts-node -r tsconfig-paths/register src/cafe-ingredients-seed.ts",
+    "check:missing-ingredients": "ts-node -r tsconfig-paths/register src/check-missing-ingredients.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^4.0.1",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/typeorm": "^11.0.0",
+    "@supabase/supabase-js": "^2.49.1",
+    "nestjs-supabase-auth": "^1.0.9",
+    "pg": "^8.14.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
     "typeorm": "^0.3.21"
