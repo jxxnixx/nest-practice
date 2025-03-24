@@ -23,7 +23,7 @@ export class IngredientDto {
 export class CategoryDto {
   @ApiProperty({
     description: '재료 카테고리 이름',
-    example: '우유/크림',
+    example: '유제품',
   })
   name: string;
 
