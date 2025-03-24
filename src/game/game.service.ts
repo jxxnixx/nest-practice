@@ -60,34 +60,55 @@ export class GameService {
     }));
   }
 
-  async getRecipes(): Promise<any[]> {
-    const recipes = await this.recipeRepository.find({
-      relations: ['recipeIngredients', 'recipeIngredients.ingredient'],
+  async getRecipes(): Promise<Recipe[]> {
+    // recipeIngredients를 eager loading으로 불러오기
+    return await this.recipeRepository.find({
+      relations: {
+        recipeIngredients: {
+          ingredient: true,
+        },
+      },
     });
-
-    return recipes.map((recipe) => ({
-      id: recipe.id,
-      result: recipe.result,
-      description: recipe.description,
-      recipeIngredients: recipe.recipeIngredients.map(
-        (ri) => ri.ingredient.nameKR,
-      ),
-    }));
   }
 
   async attemptMakeDrink(selectedIngredients: string[]): Promise<any> {
-    const recipes = await this.getRecipes();
-    const sortedSelected = [...selectedIngredients].sort();
+    // 전체 레시피를 가져올 때 관계된 데이터까지 모두 로드
+    const recipes = await this.recipeRepository.find({
+      relations: {
+        recipeIngredients: {
+          ingredient: true,
+        },
+      },
+    });
 
-    const matchedRecipe = recipes.find((recipe) => {
+    const sortedSelected = [...selectedIngredients].sort();
+    console.log('Selected ingredients:', sortedSelected);
+
+    let matchedRecipe = null;
+
+    for (const recipe of recipes) {
+      if (!recipe.recipeIngredients || recipe.recipeIngredients.length === 0) {
+        console.log(`Recipe "${recipe.result}": No ingredients found`);
+        continue;
+      }
+
       const recipeIngredientNames = recipe.recipeIngredients
+        .filter((ri) => ri && ri.ingredient)
         .map((ri) => ri.ingredient.nameKR)
         .sort();
 
-      return (
-        JSON.stringify(recipeIngredientNames) === JSON.stringify(sortedSelected)
-      );
-    });
+      console.log(`Checking recipe "${recipe.result}":`, recipeIngredientNames);
+
+      // 재료 이름 배열을 비교
+      const isMatch =
+        JSON.stringify(recipeIngredientNames) ===
+        JSON.stringify(sortedSelected);
+
+      if (isMatch) {
+        matchedRecipe = recipe;
+        break;
+      }
+    }
 
     if (matchedRecipe) {
       const completed = this.completedRecipeRepository.create({
